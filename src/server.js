@@ -50,6 +50,7 @@ app.get("/proxy/mp3/:filename", async (req, res) => {
     const fetchRes = await fetch(targetUrl, fetchOptions);
 
     if (!fetchRes.ok) {
+      console.error("Error fetching audio file:", fetchRes.statusText);
       return res.status(500).send("Failed to fetch audio file");
     }
 
