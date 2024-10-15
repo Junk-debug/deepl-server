@@ -34,7 +34,9 @@ app.post("/api/translate", async (req, res) => {
 
 app.get("/proxy/mp3/:filename", async (req, res) => {
   const { filename } = req.params;
-  const targetUrl = `https://dl01.dtmp3.pw/mp3/${filename}`;
+  // const targetUrl = `https://dl01.dtmp3.pw/mp3/${filename}`;
+  const targetUrl =
+    "https://s1.tusic.net/files/mp3/nervy_-_tvoim_morem_tusic.net_128.mp3";
 
   const rangeHeader = req.get("Range");
   const fetchOptions = {
